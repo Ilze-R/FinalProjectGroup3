@@ -234,7 +234,6 @@ public class Main {
         System.out.println("                                                                      ");
         System.out.println("                                                                      ");
     }
-
 // JavaHang entering letter and checking if it belongs to word
     public static void JavaHang (){
 
