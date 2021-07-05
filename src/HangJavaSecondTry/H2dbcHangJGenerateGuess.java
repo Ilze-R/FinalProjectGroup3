@@ -1,10 +1,5 @@
-<<<<<<< HEAD
+
 package HangJavaSecondTry;
-
-
-=======
-/*package RandomWordGenerator;
->>>>>>> 4d6a2e572ea2131312a0a7288287c8f3a8272d3d
 
 import java.sql.*;
 import java.util.Scanner;
