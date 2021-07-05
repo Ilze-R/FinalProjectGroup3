@@ -10,44 +10,40 @@ public class HangJavaSecondTry {
 
     public static void main(String[] args) {
 
-        //H2dbcHangJGenerateGuess gameGuess = new H2dbcHangJGenerateGuess();
-       // System.out.println(gameGuess.generateGuessLevel1());
+        H2dbcHangJGenerateGuess compGuess = new H2dbcHangJGenerateGuess();
+
 
         Scanner scanner = new Scanner(System.in);
-        //String gameGuess = "RIGHT";  //here comes random name from database
+
+       String gameGuess; //here comes random name from database
+        gameGuess = H2dbcHangJGenerateGuess.generateGuessLevel1();
+        System.out.println(H2dbcHangJGenerateGuess.generateGuessLevel1().replaceAll(".","_"));
+
+        //System.out.println(gameGuess);
 
 
         //System.out.println(gameName);
         List<Character> playerGuess = new ArrayList<>(); //array to store guessed letters
 
         // guessPrint(gameGuess, playerGuess);
-/*        int decrease = 0;
-        TargetPictureStart();
-        while (true) {
-            getGuess(scanner, gameGuess, playerGuess);
-            if (guessPrint(gameGuess, playerGuess)) {
-                break;
-            }
-            else if (!playerGuess.contains(gameGuess)) {
-                decrease++;
-                TargetPictureDecrease(decrease);
-            }
 
-        }
-        TargetPictureWin();*/
-    }
 
     private static void getGuess(Scanner scanner, String gameGuess, List<Character> playerGuess) {
-        int decrease = 0;
-        System.out.println("Please Enter a letter:");
-        String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
-        //stores guesses to compare them after with right guesses at guessPrint method
-       // if(!playerGuess.equals(gameGuess)){
-          //  decrease++;
-          //  TargetPictureDecrease(decrease);
-        //}else{
-            playerGuess.add(guess.charAt(0));
+            int decrease = 0;
+            TargetPictureStart();
+            //if (guess.contains(gameGuess)) {
+            //  getGuess(scanner, gameGuess, playerGuess);
+            while (decrease != 5) {
+                if (!getGuess(scanner, gameGuess, playerGuess)) {
+                    decrease++;
+                }
+                guessPrint(gameGuess, playerGuess);
+                TargetPictureDecrease(decrease);
+            }
+            //TargetPictureLose();
         }
+
+    }
 
 
     private static boolean guessPrint(String gameGuess, List<Character> playerGuess) {

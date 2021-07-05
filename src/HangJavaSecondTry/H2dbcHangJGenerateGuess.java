@@ -1,5 +1,7 @@
 package HangJavaSecondTry;
 
+
+
 import java.sql.*;
 import java.util.Scanner;
 
@@ -10,6 +12,7 @@ public class H2dbcHangJGenerateGuess {
         System.out.println();
 
         Scanner scanner = new Scanner(System.in);
+
         char again ='n';
 
         do {
@@ -29,6 +32,7 @@ public class H2dbcHangJGenerateGuess {
                // addStudent(sid,name);
             } else if (level== '2'){
                 System.out.println(generateGuessLevel2().replaceAll("[a-zA-Z]","_"));
+
 
                 //System.out.println("Please enter student's ID");
                 //int sid = scanner.nextInt();
@@ -93,7 +97,7 @@ public class H2dbcHangJGenerateGuess {
                 // Retrieve by column name
                 wordLevel1 = rs.getString("wordLevel1");
                 //Display random word, remove after final testing
-                //System.out.print(wordLevel1);
+                System.out.print(wordLevel1);
                //System.out.println();
                 //Displays the random word in underscores
                 //System.out.println(wordLevel1.replaceAll(".", "_"));  // underscore with space,
