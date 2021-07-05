@@ -1,3 +1,5 @@
+package HangJavaSecondTry;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -8,15 +10,18 @@ public class HangJavaSecondTry {
 
     public static void main(String[] args) {
 
+        //H2dbcHangJGenerateGuess gameGuess = new H2dbcHangJGenerateGuess();
+       // System.out.println(gameGuess.generateGuessLevel1());
+
         Scanner scanner = new Scanner(System.in);
-        String gameGuess = "RIGHT";  //here comes random name from database
+        //String gameGuess = "RIGHT";  //here comes random name from database
 
 
         //System.out.println(gameName);
         List<Character> playerGuess = new ArrayList<>(); //array to store guessed letters
 
         // guessPrint(gameGuess, playerGuess);
-        int decrease = 0;
+/*        int decrease = 0;
         TargetPictureStart();
         while (true) {
             getGuess(scanner, gameGuess, playerGuess);
@@ -29,7 +34,7 @@ public class HangJavaSecondTry {
             }
 
         }
-        TargetPictureWin();
+        TargetPictureWin();*/
     }
 
     private static void getGuess(Scanner scanner, String gameGuess, List<Character> playerGuess) {

@@ -10,9 +10,12 @@ public class Main {
     static int difficulty = 2;//initialize one time 1 easy, 2 medium, 3 hard
 
     public static void main(String[] args) {
+        //importing guess generator class
+
 
         System.out.println("Welcome to HangJava game!");
         chooseLevel();
+
         // JavaHang(); // guessing part
         // Win(); // method ready for use
         // Lose(); // method ready for use
