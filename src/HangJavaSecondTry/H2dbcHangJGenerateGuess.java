@@ -1,4 +1,4 @@
-package RandomWordGenerator;
+/*package RandomWordGenerator;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -254,5 +254,5 @@ public class H2dbcHangJGenerateGuess {
     }
 
 
-}
+}*/
 

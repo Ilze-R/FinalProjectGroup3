@@ -1,10 +1,11 @@
+package HangJavaSecondTry;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class HangJavaSecondTry {
-    //int playerRightCount = 0;
 
     public static void main(String[] args) {
 
@@ -12,67 +13,22 @@ public class HangJavaSecondTry {
         String gameGuess = "SYSTEM";  //here comes random name from database
         String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
 
-        //System.out.println(gameName);
         List<Character> playerGuess = new ArrayList<>(); //array to store guessed letters
 
-        /*do{
-            System.out.println("");
-        }while(decrease !=5);*/
+
         int decrease = 0;
         TargetPictureStart();
+      //if (guess.contains(gameGuess)) {
+          //  getGuess(scanner, gameGuess, playerGuess);
         while (decrease != 5) {
-            //guessPrint(gameGuess, playerGuess);
-            getGuess(scanner, gameGuess, playerGuess);
+            if (!getGuess(scanner, gameGuess, playerGuess)) {
+                decrease++;
+            }
             guessPrint(gameGuess, playerGuess);
-            decrease++;
             TargetPictureDecrease(decrease);
-           // decrease++;
-            //if (guess.matches("\\p{Alpha}+")) {
-            //decrease--;
-            // System.out.println("Your input was number, try again: ");
-           // if (!getGuess(scanner, gameGuess, playerGuess)) {
-                //TargetPictureDecrease(decrease++);
-                //decrease++;
-                // } else if (decrease == 5) {
-                //    TargetPictureLose();
-                //    System.out.println("The right answer: " + gameGuess);
-                //    break;
-           // } else {
-              //  TargetPictureDecrease(decrease++);
-                //decrease++;
-                // if (decrease == 5) {
-                //  TargetPictureLose();
-                //  System.out.println("The right answer: " + gameGuess);
-                //  break;
-            }
-            TargetPictureLose();
         }
-
-    /*private static boolean getGuess(Scanner scanner, String gameGuess, List<Character> playerGuess) {
-        System.out.println("Please Enter a letter:");
-        String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
-        playerGuess.add(guess.charAt(0));
-        //playerGuess.add(guess.);
-//guess.add(playerGuess);
-        //playerGuess.add(guess);
-        return gameGuess.contains(guess);
+        TargetPictureLose();
     }
-
-    private static boolean guessPrint(String gameGuess, List<Character> playerGuess) {
-        int playerRightCount = 0; //by comparing it with gameGuess.length we can end the loop when the player is guessed the full name
-
-        for (int i = 0; i < gameGuess.length(); i++) {
-            if (playerGuess.contains(gameGuess.charAt(i))) {
-                System.out.print(gameGuess.charAt(i) + " "); //prints the guessed letter in " "
-                playerRightCount++;
-            } else {
-                System.out.print("_ "); //prints "_" for every non guessed letter
-            }
-        }
-        System.out.println();
-        return (gameGuess.length() == playerRightCount);
-    }*/
-
 
 
     private static boolean getGuess(Scanner scanner, String gameGuess, List<Character> playerGuess) {
