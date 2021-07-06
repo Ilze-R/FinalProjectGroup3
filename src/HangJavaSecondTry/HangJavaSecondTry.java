@@ -9,18 +9,29 @@ public class HangJavaSecondTry {
 
     public static void main(String[] args) {
 
+        H2dbcHangJGenerateGuess compGuess = new H2dbcHangJGenerateGuess();
+
+
         Scanner scanner = new Scanner(System.in);
+<<<<<<<HEAD
+
+        String gameGuess; //here comes random name from database
+        gameGuess = H2dbcHangJGenerateGuess.generateGuessLevel1();
+        System.out.println(H2dbcHangJGenerateGuess.generateGuessLevel1().replaceAll(".", "_"));
+
+        //System.out.println(gameGuess);
+
+=======
         String gameGuess = "SYSTEM";  //here comes random name from database
         String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
+>>>>>>>4d 6 a2e572ea2131312a0a7288287c8f3a8272d3d
 
         List<Character> playerGuess = new ArrayList<>(); //array to store guessed letters
 
+<<<<<<<HEAD
 
+/*TargetPictureStart();
         int decrease = 0;
-
-        // if (guess.contains(gameGuess)) {
-        // getGuess(scanner, gameGuess, playerGuess);
-
         if (!fullGuess(gameGuess, guess)) {
             if (decrease != 5) {
                 if (!getGuess(guess, gameGuess, playerGuess)) {
@@ -32,37 +43,36 @@ public class HangJavaSecondTry {
             TargetPictureLose();
         }
     }
+ */ //IM TRYING TO RUN THIS
+    }
+=======
 
 
 
 
 
-    /*private static boolean getGuess(Scanner scanner, String gameGuess, List<Character> playerGuess) {
-        System.out.println("Please Enter a letter:");
-        String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
 
-        playerGuess.add(guess.charAt(0));
 
-        return gameGuess.contains(guess);
-    }*/
+
 
     private static boolean fullGuess (String gameGuess, String guess) {
         if(guess.equals(gameGuess)){
             System.out.println("Congratulations!!! You win!!!");
-            //TargetPictureWin();
+            TargetPictureWin();
         }
         return true;
     }
-    private static boolean getGuess(String guess, String gameGuess, List<Character> playerGuess) {
+<<<<<<< HEAD
+private static boolean getGuess(String guess, String gameGuess, List<Character> playerGuess) {
         //System.out.println("Please Enter a letter:");
         //String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
         playerGuess.add(guess.charAt(0));
         return gameGuess.contains(guess);
-    }
+        }
 
-   // private static boolean fullGuess (Scanner scanner, String gameGuess, List<Character> playerGuess){
-   //     if (playerGuess.equals())
-   // }
+=======
+>>>>>>> 4d6a2e572ea2131312a0a7288287c8f3a8272d3d
+>>>>>>> 9acd1a0ac667bb9ae13d99367d0fee0ba5d8728a
 
     private static boolean guessPrint(String gameGuess, List<Character> playerGuess) {
         int playerRightCount = 0; //by comparing it with gameGuess.length we can end the loop when the player is guessed the full name
