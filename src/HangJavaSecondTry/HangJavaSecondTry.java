@@ -11,9 +11,10 @@ public class HangJavaSecondTry {
 
         H2dbcHangJGenerateGuess compGuess = new H2dbcHangJGenerateGuess();
 
+        compGuess.DatabasePart();
 
         Scanner scanner = new Scanner(System.in);
-<<<<<<<HEAD
+
 
         String gameGuess; //here comes random name from database
         gameGuess = H2dbcHangJGenerateGuess.generateGuessLevel1();
@@ -21,16 +22,16 @@ public class HangJavaSecondTry {
 
         //System.out.println(gameGuess);
 
-=======
-        String gameGuess = "SYSTEM";  //here comes random name from database
+
+        //String gameGuess = "SYSTEM";  //here comes random name from database
         String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
->>>>>>>4d 6 a2e572ea2131312a0a7288287c8f3a8272d3d
+
 
         List<Character> playerGuess = new ArrayList<>(); //array to store guessed letters
 
-<<<<<<<HEAD
 
-/*TargetPictureStart();
+
+TargetPictureStart();
         int decrease = 0;
         if (!fullGuess(gameGuess, guess)) {
             if (decrease != 5) {
@@ -43,16 +44,7 @@ public class HangJavaSecondTry {
             TargetPictureLose();
         }
     }
- */ //IM TRYING TO RUN THIS
-    }
-=======
-
-
-
-
-
-
-
+  //IM TRYING TO RUN THIS
 
 
     private static boolean fullGuess (String gameGuess, String guess) {
@@ -62,7 +54,7 @@ public class HangJavaSecondTry {
         }
         return true;
     }
-<<<<<<< HEAD
+
 private static boolean getGuess(String guess, String gameGuess, List<Character> playerGuess) {
         //System.out.println("Please Enter a letter:");
         //String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
@@ -70,9 +62,8 @@ private static boolean getGuess(String guess, String gameGuess, List<Character> 
         return gameGuess.contains(guess);
         }
 
-=======
->>>>>>> 4d6a2e572ea2131312a0a7288287c8f3a8272d3d
->>>>>>> 9acd1a0ac667bb9ae13d99367d0fee0ba5d8728a
+
+
 
     private static boolean guessPrint(String gameGuess, List<Character> playerGuess) {
         int playerRightCount = 0; //by comparing it with gameGuess.length we can end the loop when the player is guessed the full name

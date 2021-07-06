@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class H2dbcHangJGenerateGuess {
-    public static void main(String[] args) {
+    public static void DatabasePart() {
 
         System.out.println("Welcome to HangJava!");
         System.out.println();
