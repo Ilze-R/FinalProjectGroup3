@@ -17,28 +17,52 @@ public class HangJavaSecondTry {
 
 
         int decrease = 0;
-        TargetPictureStart();
-      //if (guess.contains(gameGuess)) {
-          //  getGuess(scanner, gameGuess, playerGuess);
-        while (decrease != 5) {
-            if (!getGuess(scanner, gameGuess, playerGuess)) {
-                decrease++;
+
+        // if (guess.contains(gameGuess)) {
+        // getGuess(scanner, gameGuess, playerGuess);
+
+        if (!fullGuess(gameGuess, guess)) {
+            if (decrease != 5) {
+                if (!getGuess(guess, gameGuess, playerGuess)) {
+                    decrease++;
+                }
+                guessPrint(gameGuess, playerGuess);
+                TargetPictureDecrease(decrease);
             }
-            guessPrint(gameGuess, playerGuess);
-            TargetPictureDecrease(decrease);
+            TargetPictureLose();
         }
-        TargetPictureLose();
     }
 
 
-    private static boolean getGuess(Scanner scanner, String gameGuess, List<Character> playerGuess) {
+
+
+
+    /*private static boolean getGuess(Scanner scanner, String gameGuess, List<Character> playerGuess) {
         System.out.println("Please Enter a letter:");
         String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
 
-            playerGuess.add(guess.charAt(0));
+        playerGuess.add(guess.charAt(0));
 
         return gameGuess.contains(guess);
+    }*/
+
+    private static boolean fullGuess (String gameGuess, String guess) {
+        if(guess.equals(gameGuess)){
+            System.out.println("Congratulations!!! You win!!!");
+            //TargetPictureWin();
+        }
+        return true;
     }
+    private static boolean getGuess(String guess, String gameGuess, List<Character> playerGuess) {
+        //System.out.println("Please Enter a letter:");
+        //String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
+        playerGuess.add(guess.charAt(0));
+        return gameGuess.contains(guess);
+    }
+
+   // private static boolean fullGuess (Scanner scanner, String gameGuess, List<Character> playerGuess){
+   //     if (playerGuess.equals())
+   // }
 
     private static boolean guessPrint(String gameGuess, List<Character> playerGuess) {
         int playerRightCount = 0; //by comparing it with gameGuess.length we can end the loop when the player is guessed the full name
