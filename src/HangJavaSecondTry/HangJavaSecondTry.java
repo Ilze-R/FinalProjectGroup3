@@ -60,7 +60,7 @@ public class HangJavaSecondTry {
             System.out.println("Guess the letter:");
 
             // HangJavaSecondTry zzz =new HangJavaSecondTry();
-            guessingMethod(gameGuess);
+           // guessingMethod(gameGuess);
 
             System.out.println("Do you want to play again ? y/n");
             again = scanner.next().charAt(0);
@@ -72,49 +72,27 @@ public class HangJavaSecondTry {
         //System.out.println(gameGuess);
         //String gameGuess = "SYSTEM";  //here comes random name from database
 
-    }
+        List<Character> playerGuess = new ArrayList<>();
 
-    // LETTER GUESSING PART!!!!!
-    public static void guessingMethod(String gameGuess) {
-        Scanner scanner = new Scanner(System.in);
-        String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
-
-        List<Character> playerGuess = new ArrayList<>(); //array to store guessed letters
-
-        TargetPictureStart();
-        int decrease = 0;
-        while(true) {
-            TargetPictureDecrease(decrease);
-            guessPrint(gameGuess, playerGuess);
-            if (!getGuess(scanner.toString(), gameGuess, playerGuess)) {
-                decrease++;
-                if(decrease == 5){
-                    TargetPictureLose();
-                    break;
-                }
-            } else if(getGuess(scanner.toString(), gameGuess, playerGuess)){
-                decrease++;
-                if(decrease == 5){
-                    TargetPictureLose();
-                    break;
-                }
-            }
+    int decrease = 0;
+    TargetPictureStart();
+    while(decrease != 5){
+        if(!getGuess(scanner, gameGuess, playerGuess)){
+            decrease++;
         }
+        guessPrint(gameGuess, playerGuess);
+         TargetPictureDecrease(decrease);
+    }
+        TargetPictureLose();
     }
 
+    public static boolean getGuess (Scanner scanner, String gameGuess, List < Character > playerGuess){
 
-
-
-
-
-
-    public static boolean getGuess (String guess, String gameGuess, List < Character > playerGuess){
-
-             Scanner scanner = new Scanner(System.in);
+             //Scanner scanner = new Scanner(System.in);
 
 
             System.out.println("Please Enter a letter:");
-            guess = scanner.nextLine().toUpperCase(Locale.ROOT);
+            String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
             playerGuess.add(guess.charAt(0));
             return gameGuess.contains(guess);
     }
