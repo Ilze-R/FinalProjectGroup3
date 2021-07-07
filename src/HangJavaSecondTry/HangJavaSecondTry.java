@@ -37,7 +37,7 @@ public class HangJavaSecondTry {
                 // System.out.println("Please enter student's name");
                 //String name = scanner.nextLine();
 
-                // addStudent(sid,name);
+
             } else if (level== '2'){
                 TargetPictureStart();
                 gameGuess = compGuess.generateGuessLevel2();
@@ -46,7 +46,7 @@ public class HangJavaSecondTry {
                 //int sid = scanner.nextInt();
                 //scanner.nextLine();
 
-                //deleteStudent(sid);
+
             } else if (level== '3'){
                 TargetPictureStart();
                 gameGuess = compGuess.generateGuessLevel3();
@@ -86,13 +86,13 @@ public class HangJavaSecondTry {
         while(true) {
             TargetPictureDecrease(decrease);
             guessPrint(gameGuess, playerGuess);
-            if (!getGuess(scanner, gameGuess, playerGuess)) {
+            if (!getGuess(scanner.toString(), gameGuess, playerGuess)) {
                 decrease++;
                 if(decrease == 5){
                     TargetPictureLose();
                     break;
                 }
-            } else if(getGuess(scanner, gameGuess, playerGuess)){
+            } else if(getGuess(scanner.toString(), gameGuess, playerGuess)){
                 decrease++;
                 if(decrease == 5){
                     TargetPictureLose();
@@ -109,11 +109,15 @@ public class HangJavaSecondTry {
 
 
     public static boolean getGuess (String guess, String gameGuess, List < Character > playerGuess){
+
+             Scanner scanner = new Scanner(System.in);
+
+
             System.out.println("Please Enter a letter:");
-            String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
+            guess = scanner.nextLine().toUpperCase(Locale.ROOT);
             playerGuess.add(guess.charAt(0));
             return gameGuess.contains(guess);
-        }
+    }
 
         public static boolean guessPrint (String gameGuess, List < Character > playerGuess){
             int playerRightCount = 0; //by comparing it with gameGuess.length we can end the loop when the player is guessed the full name

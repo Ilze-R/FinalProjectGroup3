@@ -48,7 +48,7 @@ public class H2dbcHangJGenerateGuess {
 
             //HangJavaSecondTry gameGuess =new HangJavaSecondTry();
 
-<<<<<<< HEAD
+
 
 
             System.out.println("Do you want to play again ? y/n");
@@ -56,8 +56,7 @@ public class H2dbcHangJGenerateGuess {
             scanner.nextLine();
         } while (again == 'y');
 
-=======
->>>>>>> 65dd3f8c1d68998f201de44c44fb707653544a60
+
     }
 
     static String generateGuessLevel1() {
