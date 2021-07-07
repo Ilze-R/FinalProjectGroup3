@@ -81,35 +81,36 @@ public class HangJavaSecondTry {
 
         List<Character> playerGuess = new ArrayList<>(); //array to store guessed letters
 
+        TargetPictureStart();
         int decrease = 0;
-        if (!fullGuess(gameGuess, guess)) {
-            if (decrease != 5) {
-                if (!getGuess(guess, gameGuess, playerGuess)) {
-                    decrease++;
+        while(true) {
+            TargetPictureDecrease(decrease);
+            guessPrint(gameGuess, playerGuess);
+            if (!getGuess(scanner, gameGuess, playerGuess)) {
+                decrease++;
+                if(decrease == 5){
+                    TargetPictureLose();
+                    break;
                 }
-                guessPrint(gameGuess, playerGuess);
-                TargetPictureDecrease(decrease);
+            } else if(getGuess(scanner, gameGuess, playerGuess)){
+                decrease++;
+                if(decrease == 5){
+                    TargetPictureLose();
+                    break;
+                }
             }
-            TargetPictureLose();
         }
-
-        //IM TRYING TO RUN THIS
     }
 
 
 
 
-    public static boolean fullGuess (String gameGuess, String guess){
-            if (guess.equals(gameGuess)) {
-                System.out.println("Congratulations!!! You win!!!");
-                TargetPictureWin();
-            }
-            return true;
-        }
+
+
 
     public static boolean getGuess (String guess, String gameGuess, List < Character > playerGuess){
-            //System.out.println("Please Enter a letter:");
-            //String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
+            System.out.println("Please Enter a letter:");
+            String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
             playerGuess.add(guess.charAt(0));
             return gameGuess.contains(guess);
         }
