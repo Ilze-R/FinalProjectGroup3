@@ -11,7 +11,7 @@ public class HangJavaSecondTry {
 
         H2dbcHangJGenerateGuess compGuess = new H2dbcHangJGenerateGuess();
 
-        compGuess.DatabasePart();
+        //compGuess.DatabasePart();
         String gameGuess;
         System.out.println("Welcome to HangJava!");
         System.out.println();
