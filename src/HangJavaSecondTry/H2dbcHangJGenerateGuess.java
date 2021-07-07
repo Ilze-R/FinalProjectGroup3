@@ -2,13 +2,58 @@
 package HangJavaSecondTry;
 
 import java.sql.*;
+import java.util.Scanner;
 
 public class H2dbcHangJGenerateGuess {
-    public static void DatabasePart() {
+    public static void main(String[] args) {
+
+        System.out.println("Welcome to HangJava!");
+        System.out.println();
+
+        Scanner scanner = new Scanner(System.in);
+
+        char again ='n';
+
+        do {
+            System.out.println("Please choose level of difficulty: easy (1),medium (2) or  hard (3):  1/2/3");
+            char level = scanner.next().charAt(0);
+            scanner.nextLine();
+
+            if(level == '1'){
+                System.out.println(generateGuessLevel1().replaceAll("[a-zA-Z]","_"));
+
+                //int sid = scanner.nextInt();
+                //scanner.nextLine();
+
+               // System.out.println("Please enter student's name");
+                //String name = scanner.nextLine();
+
+               // addStudent(sid,name);
+            } else if (level== '2'){
+                System.out.println(generateGuessLevel2().replaceAll("[a-zA-Z]","_"));
+
+
+                //System.out.println("Please enter student's ID");
+                //int sid = scanner.nextInt();
+                //scanner.nextLine();
+
+                //deleteStudent(sid);
+            } else if (level== '3'){
+                System.out.println(generateGuessLevel3().replaceAll("[a-zA-Z]","_"));
+
+
+            } else {
+                System.out.println("Input was not valid.");
+            }
+
+            //HangJavaSecondTry gameGuess =new HangJavaSecondTry();
 
 
 
-
+            System.out.println("Do you want to play again ? y/n");
+            again = scanner.next().charAt(0);
+            scanner.nextLine();
+        } while (again == 'y');
 
     }
 
