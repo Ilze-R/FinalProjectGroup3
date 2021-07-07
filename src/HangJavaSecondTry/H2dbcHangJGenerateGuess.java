@@ -2,58 +2,13 @@
 package HangJavaSecondTry;
 
 import java.sql.*;
-import java.util.Scanner;
 
 public class H2dbcHangJGenerateGuess {
     public static void DatabasePart() {
 
-        System.out.println("Welcome to HangJava!");
-        System.out.println();
-
-        Scanner scanner = new Scanner(System.in);
-
-        char again ='n';
-
-        do {
-            System.out.println("Please choose level of difficulty: easy (1),medium (2) or  hard (3):  1/2/3");
-            char level = scanner.next().charAt(0);
-            scanner.nextLine();
-
-            if(level == '1'){
-                System.out.println(generateGuessLevel1().replaceAll("[a-zA-Z]","_"));
-
-                //int sid = scanner.nextInt();
-                //scanner.nextLine();
-
-               // System.out.println("Please enter student's name");
-                //String name = scanner.nextLine();
-
-               // addStudent(sid,name);
-            } else if (level== '2'){
-                System.out.println(generateGuessLevel2().replaceAll("[a-zA-Z]","_"));
-
-
-                //System.out.println("Please enter student's ID");
-                //int sid = scanner.nextInt();
-                //scanner.nextLine();
-
-                //deleteStudent(sid);
-            } else if (level== '3'){
-                System.out.println("Guess the word:"+ "\n"+generateGuessLevel3().replaceAll("[a-zA-Z]","_"));
-                System.out.println();
-
-            } else {
-                System.out.println("Input was not valid.");
-            }
-
-            //HangJavaSecondTry gameGuess =new HangJavaSecondTry();
 
 
 
-            System.out.println("Do you want to play again ? y/n");
-            again = scanner.next().charAt(0);
-            scanner.nextLine();
-        } while (again == 'y');
 
     }
 
@@ -167,7 +122,7 @@ public class H2dbcHangJGenerateGuess {
                 // Retrieve by column name
                 wordLevel2 = rs.getString("wordLevel2");
                 //Display random word, remove after final testing
-                //System.out.print(wordLevel2);
+                System.out.print(wordLevel2);
                 //System.out.println();
                 //Displays the random word in underscores
                 //System.out.println(wordLevel2.replaceAll(".", "_"));  // underscore with space,
@@ -238,7 +193,7 @@ public class H2dbcHangJGenerateGuess {
                 // Retrieve by column name
                 wordLevel3= rs.getString("wordLevel3");
                 //Display random word, remove after final testing
-                //System.out.print(wordLevel3);
+                System.out.print(wordLevel3);
                 //System.out.println();
                 //Displays the random word in underscores
                 //System.out.println(wordLevel3.replaceAll(".", "_"));  // underscore with space,
