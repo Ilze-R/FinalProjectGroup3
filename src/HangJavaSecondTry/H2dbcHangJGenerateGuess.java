@@ -7,9 +7,6 @@ public class H2dbcHangJGenerateGuess {
     public static void DatabasePart() {
 
 
-
-
-
     }
 
     static String generateGuessLevel1() {
