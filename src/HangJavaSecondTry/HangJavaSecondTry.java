@@ -69,6 +69,7 @@ public class HangJavaSecondTry {
             System.out.println("Do you want to play again ? y/n");
             again = scanner.next().charAt(0);
             scanner.nextLine();
+
         } while (again == 'y');
 
     }
@@ -114,25 +115,20 @@ public class HangJavaSecondTry {
             System.out.println("                               |#      | \\ ___ /                   ");
             System.out.println("                                \\ ___ /     /^                          ");
             System.out.println("                                   ^\\     /                             ");
-            System.out.println("                                      \\ /                            ");
-            System.out.println("                                    ///-\\\\\\                              ");
-            System.out.println("                                    |^    ^|                           ");
-            System.out.println("                                   |O      O|                           ");
-            System.out.println("                                    |   ~  |                          ");
-            System.out.println("                                     \\  o /                           ");
-            System.out.println("                                       | |                             ");
-            System.out.println("                                    ,-/   \\-,___                            ");
-            System.out.println("                                   / /).:.('--._                          ");
-            System.out.println("                                  (_) (_,_)                            ");
-            System.out.println("                                      | Y |                            ");
-            System.out.println("                                     /  |  \\                          ");
+            System.out.println("                 _____                 \\ /                              ");
+            System.out.println("                /\\___ \\                 \\                           ");
+            System.out.println("                \\/__/\\ \\      __      __//__      __                        ");
+            System.out.println("                     _\\ \\   /'__`\\   /\\ \\/\\ \\   /'__`\\                  ");
+            System.out.println("                  /\\ \\_\\ \\ /\\ \\L\\.\\_ \\ \\ \\_/ | /\\ \\L\\.\\_            ");
+            System.out.println("                  \\ \\____/ \\ \\__/.\\_\\ \\ \\___/  \\ \\__/.\\_\\           ");
+            System.out.println("                   \\/___/   \\/__/\\/_/  \\/__/    \\/__/\\/_/              ");
             System.out.println("                                                                      ");
             System.out.println("                                                                      ");
             System.out.println("                                                                      ");
             System.out.println("                                                                      ");
             System.out.println("                                                                      ");
             System.out.println("                  /\\  /\\  /\\                      /\\  /\\  /\\                       ");
-            System.out.println("                 /  \\/  \\/  \\it's very sharp here/  \\/  \\/  \\                                           ");
+            System.out.println("                 /  \\/  \\/  \\  Keep Java high!!  /  \\/  \\/  \\                                           ");
         }
 
         public static void TargetPictureDecrease ( int decrease){
@@ -149,24 +145,19 @@ public class HangJavaSecondTry {
                 System.out.println("                               |#      | \\ ___ /                   ");
                 System.out.println("                                \\ ___ /     /^                          ");
                 System.out.println("                                   ^\\     /                             ");
-                System.out.println("                                      \\ /                            ");
-                System.out.println("                                    ///-\\\\\\                              ");
-                System.out.println("                                    |^    ^|                           ");
-                System.out.println("                                   |O      O|                           ");
-                System.out.println("                                    |   ~  |                          ");
-                System.out.println("                                     \\  o /                           ");
-                System.out.println("                                       | |                             ");
-                System.out.println("                                    ,-/   \\-,___                            ");
-                System.out.println("                                   / /).:.('--._                          ");
-                System.out.println("                                  (_) (_,_)                            ");
-                System.out.println("                                      | Y |                            ");
-                System.out.println("                                     /  |  \\                          ");
+                System.out.println("                 _____                 \\ /                              ");
+                System.out.println("                /\\___ \\                 \\                           ");
+                System.out.println("                \\/__/\\ \\      __      __//__      __                        ");
+                System.out.println("                     _\\ \\   /'__`\\   /\\ \\/\\ \\   /'__`\\                  ");
+                System.out.println("                  /\\ \\_\\ \\ /\\ \\L\\.\\_ \\ \\ \\_/ | /\\ \\L\\.\\_            ");
+                System.out.println("                  \\ \\____/ \\ \\__/.\\_\\ \\ \\___/  \\ \\__/.\\_\\           ");
+                System.out.println("                   \\/___/   \\/__/\\/_/  \\/__/    \\/__/\\/_/              ");
                 System.out.println("                                                                      ");
                 System.out.println("                                                                      ");
                 System.out.println("                                                                      ");
                 System.out.println("                                                                      ");
                 System.out.println("                  /\\  /\\  /\\                      /\\  /\\  /\\                       ");
-                System.out.println("                 /  \\/  \\/  \\it's very sharp here/  \\/  \\/  \\                                           ");
+                System.out.println("                 /  \\/  \\/  \\  Keep Java high!!  /  \\/  \\/  \\                                           ");
             }
 
             if (decrease == 2) {
@@ -182,23 +173,18 @@ public class HangJavaSecondTry {
                 System.out.println("                               |#      | \\ ___ /                   ");
                 System.out.println("                                \\ ___ /     /^                          ");
                 System.out.println("                                   ^\\     /                             ");
-                System.out.println("                                      \\ /                            ");
-                System.out.println("                                    ///-\\\\\\                              ");
-                System.out.println("                                    |^    ^|                           ");
-                System.out.println("                                   |O      O|                           ");
-                System.out.println("                                    |   ~  |                          ");
-                System.out.println("                                     \\  o /                           ");
-                System.out.println("                                       | |                             ");
-                System.out.println("                                    ,-/   \\-,___                            ");
-                System.out.println("                                   / /).:.('--._                          ");
-                System.out.println("                                  (_) (_,_)                            ");
-                System.out.println("                                      | Y |                            ");
-                System.out.println("                                     /  |  \\                          ");
-                System.out.println("                                                                      ");
-                System.out.println("                                                                      ");
-                System.out.println("                                                                      ");
-                System.out.println("                  /\\  /\\  /\\                      /\\  /\\  /\\                       ");
-                System.out.println("                 /  \\/  \\/  \\it's very sharp here/  \\/  \\/  \\                                           ");
+                System.out.println("                 _____                 \\ /                              ");
+                System.out.println("                /\\___ \\                 \\                           ");
+                System.out.println("                \\/__/\\ \\      __      __//__      __                        ");
+                System.out.println("                     _\\ \\   /'__`\\   /\\ \\/\\ \\   /'__`\\                  ");
+                System.out.println("                  /\\ \\_\\ \\ /\\ \\L\\.\\_ \\ \\ \\_/ | /\\ \\L\\.\\_             ");
+                System.out.println("                  \\ \\____/ \\ \\__/.\\_\\ \\ \\___/  \\ \\__/.\\_\\               ");
+                System.out.println("                   \\/___/   \\/__/\\/_/  \\/__/    \\/__/\\/_/                     ");
+                System.out.println("                                                                                    ");
+                System.out.println("                                                                                    ");
+                System.out.println("                                                                                    ");
+                System.out.println("                  /\\  /\\  /\\                      /\\  /\\  /\\                  ");
+                System.out.println("                 /  \\/  \\/  \\  Keep Java high!!  /  \\/  \\/  \\                 ");
             }
 
 
@@ -214,22 +200,17 @@ public class HangJavaSecondTry {
                 System.out.println("                               |#      | \\ ___ /                   ");
                 System.out.println("                                \\ ___ /     /^                          ");
                 System.out.println("                                   ^\\     /                             ");
-                System.out.println("                                      \\ /                            ");
-                System.out.println("                                    ///-\\\\\\                              ");
-                System.out.println("                                    |^    ^|                           ");
-                System.out.println("                                   |O      O|                           ");
-                System.out.println("                                    |   ~  |                          ");
-                System.out.println("                                     \\  ^ /                           ");
-                System.out.println("                                       | |                             ");
-                System.out.println("                                    ,-/   \\-,___                            ");
-                System.out.println("                                   / /).:.('--._                          ");
-                System.out.println("                                  (_) (_,_)                            ");
-                System.out.println("                                      | Y |                            ");
-                System.out.println("                                     /  |  \\                          ");
-                System.out.println("                                                                      ");
-                System.out.println("                                                                      ");
-                System.out.println("                  /\\  /\\  /\\                      /\\  /\\  /\\                       ");
-                System.out.println("                 /  \\/  \\/  \\it's very sharp here/  \\/  \\/  \\                                           ");
+                System.out.println("                 _____                 \\ /                              ");
+                System.out.println("                /\\___ \\                 \\                           ");
+                System.out.println("                \\/__/\\ \\      __      __//__      __                             ");
+                System.out.println("                     _\\ \\   /'__`\\   /\\ \\/\\ \\   /'__`\\                      ");
+                System.out.println("                  /\\ \\_\\ \\ /\\ \\L\\.\\_ \\ \\ \\_/ | /\\ \\L\\.\\_             ");
+                System.out.println("                  \\ \\____/ \\ \\__/.\\_\\ \\ \\___/  \\ \\__/.\\_\\               ");
+                System.out.println("                   \\/___/   \\/__/\\/_/  \\/__/    \\/__/\\/_/                     ");
+                System.out.println("                                                                                    ");
+                System.out.println("                                                                                    ");
+                System.out.println("                  /\\  /\\  /\\                      /\\  /\\  /\\                  ");
+                System.out.println("                 /  \\/  \\/  \\  Keep Java high!!  /  \\/  \\/  \\                 ");
             }
 
 
@@ -240,67 +221,55 @@ public class HangJavaSecondTry {
                 System.out.println("                               |#      |                .    ");
                 System.out.println("                                \\ ___ /  /    .   *                    ");
                 System.out.println("                                   ^\\      .                           ");
-                System.out.println("                                      \\                             ");
-                System.out.println("                                    ///-\\\\\\                              ");
-                System.out.println("                                    |^    ^|                           ");
-                System.out.println("                                   |O      O|                           ");
-                System.out.println("                                    |   ~  |                          ");
-                System.out.println("                                     \\  ^ /                           ");
-                System.out.println("                                       | |                             ");
-                System.out.println("                                    ,-/   \\-,___                            ");
-                System.out.println("                                   / /).:.('--._                          ");
-                System.out.println("                                  (_) (_,_)                            ");
-                System.out.println("                                      | Y |                            ");
-                System.out.println("                                     /  |  \\                          ");
-                System.out.println("                                                                      ");
-                System.out.println("                  /\\  /\\  /\\                      /\\  /\\  /\\                       ");
-                System.out.println("                 /  \\/  \\/  \\it's very sharp here/  \\/  \\/  \\                                           ");
+                System.out.println("                 _____                 \\ /                              ");
+                System.out.println("                /\\___ \\                 \\                           ");
+                System.out.println("                \\/__/\\ \\      __      __//__      __                        ");
+                System.out.println("                     _\\ \\   /'__`\\   /\\ \\/\\ \\   /'__`\\                  ");
+                System.out.println("                  /\\ \\_\\ \\ /\\ \\L\\.\\_ \\ \\ \\_/ | /\\ \\L\\.\\_             ");
+                System.out.println("                  \\ \\____/ \\ \\__/.\\_\\ \\ \\___/  \\ \\__/.\\_\\               ");
+                System.out.println("                   \\/___/   \\/__/\\/_/  \\/__/    \\/__/\\/_/                     ");
+                System.out.println("                                                                                    ");
+                System.out.println("                  /\\  /\\  /\\                      /\\  /\\  /\\                  ");
+                System.out.println("                 /  \\/  \\/  \\  Keep Java high!!  /  \\/  \\/  \\                 ");
             }
         }
 
         public static void TargetPictureLose () {
-            System.out.println("                       .                 ");
-            System.out.println("                             ^                  ");
+            System.out.println("                       .         .        ");
+            System.out.println("                             ^         .         ");
             System.out.println("                       \\         /                       ");
-            System.out.println("                           BOOM                                    ");
-            System.out.println("                       *    .     \\                             ");
-            System.out.println("                                ///-\\\\\\                              ");
-            System.out.println("                                |^    ^|                           ");
-            System.out.println("                               |O      O|                           ");
-            System.out.println("                                |   ~  |                          ");
-            System.out.println("                                 \\ <> /                           ");
-            System.out.println("                                   | |                             ");
-            System.out.println("                  cut cut cut cut /   \\ cut cut cut cut              ");
-            System.out.println("                   /\\  /\\  /\\     ).:.('   /\\  /\\  /\\              ");
-            System.out.println("                  /  \\/  \\/  \\    (_,_)   /  \\/  \\/  \\               ");
+            System.out.println("                           BOOM       .                             ");
+            System.out.println("           /       .     *    .     *             /    .   /         ");
+            System.out.println("       /      .    ._*._           .      \\ .            .    /                 ");
+            System.out.println("     .           .\\._* \\      .     .      *    .  .   .      .                ");
+            System.out.println("           .     */../. *    .  ..      .*/..   .   ..    .         /            ");
+            System.out.println("     /    .    .     .   .* \\   /*_.`*   .\\ *< *   /'._*\\    .     .          ");
+            System.out.println("        .     .     > *.\\ * < > * L\\.* . \\ *  \\./ * /* \\L*.*.               ");
+            System.out.println("                    cut cut cut cut cut / \\ cut cut cut cut cut                ");
+            System.out.println("                   /\\  /\\  /\\                      /\\  /\\  /\\              ");
+            System.out.println("                  /  \\/  \\/  \\     YOU LOSE !!    /  \\/  \\/  \\             ");
             System.out.println("                                                                ");
-            System.out.println("YOU LOSE!!!");
         }
 
         public static void TargetPictureWin () {
-            System.out.println("                                   .''.                                                     ");
-            System.out.println("         .''.             *''*    :_\\/_:     .                                                                       ");
-            System.out.println("        :_\\/_:   .    .:.*_\\/_*   : /\\ :  .'.:.'.                                                                    ");
-            System.out.println("    .''.: /\\ : _\\(/_  ':'* /\\ *  : '..'.  -=:o:=-                                                                      ");
-            System.out.println("   :_\\/_:'.:::. /)\\*''*  .|.* '.\\'/.'_\\(/_'.':'.'                                                                      ");
-            System.out.println("   : /\\ : :::::  '*_\\/_* | |  -= o =- /)\\    '  *                                                                      ");
-            System.out.println("    '..'  ':::'   * /\\ * |'|  .'/.\\'.  '.                                                                      ");
-            System.out.println("   *          *  *          :                                                                      ");
-            System.out.println("                                                                      ");
-            System.out.println("                           .         ///-\\\\\\                              ");
-            System.out.println("       .* *.            .'.:.'.      |^    ^|                           ");
-            System.out.println("       *. .*            -=:o:=-     |O      O|                           ");
-            System.out.println("         *              '.':'.       |   ~  |                          ");
-            System.out.println("          \\       `o`o     '          \\  U /                           ");
-            System.out.println("           \\     o`o`o`o               | |                             ");
-            System.out.println("            \\     `o`o`               /   \\                           ");
-            System.out.println("             \\      |                 ).:.(                          ");
-            System.out.println("              \\     |                 (_,_)                            ");
-            System.out.println("               \\    |                 | Y |                            ");
-            System.out.println("                \\   |                /  |  \\                          ");
-            System.out.println(" ________________________________________________________________________     ");
-            System.out.println("                                                                      ");
-            System.out.println("                                                                      ");
+            System.out.println("                                   .''.                                                 ");
+            System.out.println("         .''.             *''*    :_\\/_:     .           .. \\ ..                      ");
+            System.out.println("        :_\\/_:   .    .:.*_\\/_*   : /\\ :  .'.:.'. .**. / o'o'\\ ..                   ");
+            System.out.println("    .''.: /\\ : _\\(/_  ':'* /\\ *  : '..'.  -=:o:=-*.*.* o'o'o'o'\\ ..                 ");
+            System.out.println("   :_\\/_:'.:::. /)\\*''*  .|.* '.\\'/.'_\\(/_'.':'.'.**. / o'o'\\ ..                   ");
+            System.out.println("   : /\\ : :::::  '*_\\/_* | |  -= o =- /)\\     '  * | *   /  ..                        ");
+            System.out.println("    '..'  ':::'   * /\\ * |'|  .'/.\\'.  '.     \\    |    /                             ");
+            System.out.println("   *          *  *          :                  \\   |   /                              ");
+            System.out.println("                 _____                          \\  |  /                            ");
+            System.out.println("                /\\___ \\                          \\ | /                             ");
+            System.out.println("                \\/__/\\ \\      __      __  __      __                              ");
+            System.out.println("                     _\\ \\   /'__`\\   /\\ \\/\\ \\   /'__`\\                       ");
+            System.out.println("                  /\\ \\_\\ \\ /\\ \\L\\.\\_ \\ \\ \\_/ | /\\ \\L\\.\\_              ");
+            System.out.println("                  \\ \\____/ \\ \\__/.\\_\\ \\ \\___/  \\ \\__/.\\_\\                ");
+            System.out.println("                   \\/___/   \\/__/\\/_/  \\/__/    \\/__/\\/_/                      ");
+            System.out.println(" ________________________________________________________________________            ");
+            System.out.println("                      CONGRATULATIONS !! YOU WIN  !!                                  ");
+            System.out.println("                                                                                 ");
         }
 
 
