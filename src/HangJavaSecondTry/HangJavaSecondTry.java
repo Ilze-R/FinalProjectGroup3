@@ -50,7 +50,7 @@ public class HangJavaSecondTry {
             gameGuess = gameGuess.toUpperCase(Locale.ROOT);
             TargetPictureStart();
             System.out.println("Hidden word:" + "\n" + gameGuess.replaceAll("[a-zA-Z]", "_"));
-            // System.out.println("Guess the letter:"); // don't need
+            // System.out.println("Guess the letter:"); // dont need
 
             List<Character> playerGuess = new ArrayList<>();
 
@@ -62,7 +62,6 @@ public class HangJavaSecondTry {
                 TargetPictureLose();
                 break;
             }
-            guessPrint(gameGuess, playerGuess);
             if(!getGuess(scanner, gameGuess, playerGuess)){
                 life++;
             }
