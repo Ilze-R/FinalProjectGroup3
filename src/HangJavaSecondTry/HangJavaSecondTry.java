@@ -20,37 +20,26 @@ public class HangJavaSecondTry {
         char again = 'n';
 
         do {
-            System.out.println("Please choose level of difficulty: easy (1),medium (2) or  hard (3):");
+            System.out.println("Please choose level of difficulty: Easy (1),Medium (2) or  Hard (3):");
             char level = scanner.next().charAt(0);
             scanner.nextLine();
 
             if (level == '1') {
                 gameGuess = compGuess.generateGuessLevel1();
 
-                //int sid = scanner.nextInt();
-                //scanner.nextLine();
-
-                // System.out.println("Please enter student's name");
-                //String name = scanner.nextLine();
-
             } else if (level == '2') {
                 gameGuess = compGuess.generateGuessLevel2();
 
-                //System.out.println("Please enter student's ID");
-                //int sid = scanner.nextInt();
-                //scanner.nextLine();
-
             } else if (level == '3') {
                 gameGuess = compGuess.generateGuessLevel3();
-
             } else {
                 System.out.println("Input was not valid. Starting game at medium level"); //need to fix
                 gameGuess = compGuess.generateGuessLevel2();
             }
             gameGuess = gameGuess.toUpperCase(Locale.ROOT);
             TargetPictureStart();
-            System.out.println("Hidden word:" + "\n" + gameGuess.replaceAll("[a-zA-Z]", "_"));
-            // System.out.println("Guess the letter:"); // dont need
+            System.out.println("Guess the hidden word below:" + "\n" + gameGuess.replaceAll("[a-zA-Z]", "_"));
+
 
             List<Character> playerGuess = new ArrayList<>();
 
@@ -59,7 +48,7 @@ public class HangJavaSecondTry {
                 TargetPictureDecrease(life);
 
             if (life == 5) {
-                TargetPictureLose();
+                TargetPictureLose(gameGuess);
                 break;
             }
             if(!getGuess(scanner, gameGuess, playerGuess)){
@@ -70,16 +59,16 @@ public class HangJavaSecondTry {
                 break;
             }
         }
-
+            System.out.println();
             System.out.println("Do you want to play again ? y/n");
             again = scanner.next().charAt(0);
             scanner.nextLine();
 
-        } while (again == 'y');
+        } while (again== 'y');
     }
 
     public static boolean getGuess (Scanner scanner, String gameGuess, List < Character > playerGuess){
-            //Scanner scanner = new Scanner(System.in);
+
             System.out.println("Please Enter a letter:");
             String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
             playerGuess.add(guess.charAt(0));
@@ -235,7 +224,9 @@ public class HangJavaSecondTry {
             }
         }
 
-        public static void TargetPictureLose () {
+        public static void TargetPictureLose (String gameGuess) {
+
+
             System.out.println("                       .         .        ");
             System.out.println("                             ^         .         ");
             System.out.println("                       \\         /                       ");
@@ -250,6 +241,8 @@ public class HangJavaSecondTry {
             System.out.println("                   /\\  /\\  /\\                      /\\  /\\  /\\              ");
             System.out.println("                  /  \\/  \\/  \\     YOU LOSE !!    /  \\/  \\/  \\             ");
             System.out.println("                                                                ");
+            System.out.println();
+            System.out.println("The hidden word was:"+ gameGuess);
         }
 
         public static void TargetPictureWin () {
