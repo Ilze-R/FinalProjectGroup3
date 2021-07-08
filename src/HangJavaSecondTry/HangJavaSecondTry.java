@@ -50,32 +50,34 @@ public class HangJavaSecondTry {
             gameGuess = gameGuess.toUpperCase(Locale.ROOT);
             TargetPictureStart();
             System.out.println("Hidden word:" + "\n" + gameGuess.replaceAll("[a-zA-Z]", "_"));
-            // System.out.println("Guess the letter:"); // dont need
+            // System.out.println("Guess the letter:"); // don't need
 
             List<Character> playerGuess = new ArrayList<>();
 
-            int decrease = 0;
+            int life = 0;
+            while (true) {
+                TargetPictureDecrease(life);
 
-            while (decrease != 5) {
-                if (!getGuess(scanner, gameGuess, playerGuess)) {
-                    decrease++;
-                }
-
-                guessPrint(gameGuess, playerGuess);
-               TargetPictureDecrease(decrease);
+            if (life == 5) {
+                TargetPictureLose();
+                break;
             }
-            TargetPictureLose();
+            guessPrint(gameGuess, playerGuess);
+            if(!getGuess(scanner, gameGuess, playerGuess)){
+                life++;
+            }
+            if(guessPrint(gameGuess, playerGuess)){
+                TargetPictureWin();
+                break;
+            }
+        }
 
             System.out.println("Do you want to play again ? y/n");
             again = scanner.next().charAt(0);
             scanner.nextLine();
 
         } while (again == 'y');
-
     }
-       // System.out.println(compGuess.generateGuessLevel1().replaceAll(".", "_"));
-        //System.out.println(gameGuess);
-        //String gameGuess = "SYSTEM";  //here comes random name from database
 
     public static boolean getGuess (Scanner scanner, String gameGuess, List < Character > playerGuess){
             //Scanner scanner = new Scanner(System.in);
