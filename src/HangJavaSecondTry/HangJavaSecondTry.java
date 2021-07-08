@@ -10,6 +10,7 @@ public class HangJavaSecondTry {
     public static void main(String[] args) {
 
         H2dbcHangJGenerateGuess compGuess = new H2dbcHangJGenerateGuess();
+        HangJavaLevelsAndStats results = new HangJavaLevelsAndStats();
 
         String gameGuess;
         System.out.println("Welcome to HangJava!");
@@ -20,7 +21,7 @@ public class HangJavaSecondTry {
         char again = 'n';
 
         do {
-            System.out.println("Please choose level of difficulty: Easy (1),Medium (2) or  Hard (3):");
+            System.out.println("Please choose level of difficulty: Easy (1), Medium (2), Hard (3):");
             char level = scanner.next().charAt(0);
             scanner.nextLine();
 
@@ -38,7 +39,7 @@ public class HangJavaSecondTry {
             }
             gameGuess = gameGuess.toUpperCase(Locale.ROOT);
             TargetPictureStart();
-            System.out.println("Guess the hidden word below:" + "\n" + gameGuess.replaceAll("[a-zA-Z]", "_"));
+            System.out.println("Guess the hidden word below:" + "\n" + gameGuess.replaceAll("[a-zA-Z]", "_ "));
 
 
             List<Character> playerGuess = new ArrayList<>();
@@ -46,9 +47,14 @@ public class HangJavaSecondTry {
             int life = 0;
             while (true) {
                 TargetPictureDecrease(life);
+                if (!playerGuess.isEmpty() ) {
+                    System.out.println();
+                    System.out.println("Entered letters: "+playerGuess);
+                }
 
             if (life == 5) {
                 TargetPictureLose(gameGuess);
+                results.Lose();
                 break;
             }
             if(!getGuess(scanner, gameGuess, playerGuess)){
@@ -56,6 +62,7 @@ public class HangJavaSecondTry {
             }
             if(guessPrint(gameGuess, playerGuess)){
                 TargetPictureWin();
+                results.Win();
                 break;
             }
         }
