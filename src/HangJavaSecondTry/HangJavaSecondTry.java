@@ -79,13 +79,13 @@ public class HangJavaSecondTry {
         } while (again== 'y');
 
         System.out.println();
-        System.out.println("Goodbye, Thank you playing HangJava!");
+        System.out.println("Goodbye, Thank you for playing HangJava!");
     }
 
     public static boolean getGuess (Scanner scanner, String gameGuess, List < Character > playerGuess){
 
             System.out.println();
-            System.out.println("Please Enter a letter or other keyboard characters, No digits Please!:");
+            System.out.println("Please enter letter:");
             String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
             playerGuess.add(guess.charAt(0));
 
@@ -259,6 +259,7 @@ public class HangJavaSecondTry {
             System.out.println("                                                                ");
             System.out.println();
             System.out.println("The hidden word was:"+ gameGuess);
+            System.out.println();
         }
 
         public static void TargetPictureWin () {
