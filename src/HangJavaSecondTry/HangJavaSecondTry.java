@@ -39,7 +39,8 @@ public class HangJavaSecondTry {
             }
             gameGuess = gameGuess.toUpperCase(Locale.ROOT);
             TargetPictureStart();
-            System.out.println("Guess the hidden word below:" + "\n" + gameGuess.replaceAll("[a-zA-Z]", "_ "));
+            //Number of underscores hints at the number of letters in the hidden word
+            System.out.println("Guess the hidden word below:" + "\n" + gameGuess.replaceAll("[* .a-zA-Z]", "_ "));
 
 
             List<Character> playerGuess = new ArrayList<>();
@@ -70,6 +71,12 @@ public class HangJavaSecondTry {
             System.out.println("Do you want to play again ? y/n");
             again = scanner.next().charAt(0);
             scanner.nextLine();
+            // Ensures user only enters lower case letters  y and n 
+            if (Character.isUpperCase(again)){
+                System.out.println("Please use only lower case y or n");
+                again = scanner.next().charAt(0);
+                scanner.nextLine();
+            }
 
         } while (again== 'y');
     }
