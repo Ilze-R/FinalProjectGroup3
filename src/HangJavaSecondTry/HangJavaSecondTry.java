@@ -9,9 +9,6 @@ public class HangJavaSecondTry {
 
     public static void main(String[] args) {
 
-        H2dbcHangJGenerateGuess compGuess = new H2dbcHangJGenerateGuess();
-        HangJavaLevelsAndStats results = new HangJavaLevelsAndStats();
-
         String gameGuess;
         System.out.println("Welcome to HangJava!");
         System.out.println();
@@ -26,16 +23,16 @@ public class HangJavaSecondTry {
             scanner.nextLine();
 
             if (level == '1') {
-                gameGuess = compGuess.generateGuessLevel1();
+                gameGuess = H2dbcHangJGenerateGuess.generateGuessLevel1();
 
             } else if (level == '2') {
-                gameGuess = compGuess.generateGuessLevel2();
+                gameGuess = H2dbcHangJGenerateGuess.generateGuessLevel2();
 
             } else if (level == '3') {
-                gameGuess = compGuess.generateGuessLevel3();
+                gameGuess = H2dbcHangJGenerateGuess.generateGuessLevel3();
             } else {
                 System.out.println("Input was not valid. Starting game at medium level"); //need to fix
-                gameGuess = compGuess.generateGuessLevel2();
+                gameGuess = H2dbcHangJGenerateGuess.generateGuessLevel2();
             }
             gameGuess = gameGuess.toUpperCase(Locale.ROOT);
             TargetPictureStart();
@@ -55,7 +52,7 @@ public class HangJavaSecondTry {
 
             if (life == 5) {
                 TargetPictureLose(gameGuess);
-                results.Lose();
+                HangJavaLevelsAndStats.Lose();
                 break;
             }
             if(!getGuess(scanner, gameGuess, playerGuess)){
@@ -63,7 +60,7 @@ public class HangJavaSecondTry {
             }
             if(guessPrint(gameGuess, playerGuess)){
                 TargetPictureWin();
-                results.Win();
+                HangJavaLevelsAndStats.Win();
                 break;
             }
         }
@@ -82,7 +79,7 @@ public class HangJavaSecondTry {
         } while (again== 'y');
 
         System.out.println();
-        System.out.println("Thank you playing HangJava!");
+        System.out.println("Goodbye, Thank you playing HangJava!");
     }
 
     public static boolean getGuess (Scanner scanner, String gameGuess, List < Character > playerGuess){
