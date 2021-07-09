@@ -18,7 +18,7 @@ public class HangJavaSecondTry {
 
         Scanner scanner = new Scanner(System.in);
 
-        char again = 'n';
+        char again;
 
         do {
             System.out.println("Please choose level of difficulty: Easy (1), Medium (2), Hard (3):");
@@ -39,9 +39,9 @@ public class HangJavaSecondTry {
             }
             gameGuess = gameGuess.toUpperCase(Locale.ROOT);
             TargetPictureStart();
+            System.out.println();
             //Number of underscores hints at the number of letters in the hidden word
             System.out.println("Guess the hidden word below:" + "\n" + gameGuess.replaceAll("[* .a-zA-Z]", "_ "));
-
 
             List<Character> playerGuess = new ArrayList<>();
 
@@ -71,19 +71,24 @@ public class HangJavaSecondTry {
             System.out.println("Do you want to play again ? y/n");
             again = scanner.next().charAt(0);
             scanner.nextLine();
-            // Ensures user only enters lower case letters  y and n 
+            // Ensures user only enters lower case letters  y and n
             if (Character.isUpperCase(again)){
                 System.out.println("Please use only lower case y or n");
                 again = scanner.next().charAt(0);
                 scanner.nextLine();
             }
 
+
         } while (again== 'y');
+
+        System.out.println();
+        System.out.println("Thank you playing HangJava!");
     }
 
     public static boolean getGuess (Scanner scanner, String gameGuess, List < Character > playerGuess){
 
-            System.out.println("Please Enter a letter:");
+            System.out.println();
+            System.out.println("Please Enter a letter or other keyboard characters, No digits Please!:");
             String guess = scanner.nextLine().toUpperCase(Locale.ROOT);
             playerGuess.add(guess.charAt(0));
 
