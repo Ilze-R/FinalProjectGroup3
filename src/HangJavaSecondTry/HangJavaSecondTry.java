@@ -10,6 +10,7 @@ public class HangJavaSecondTry {
     public static void main(String[] args) {
 
         String gameGuess;
+        System.out.println();
         System.out.println("Welcome to HangJava!");
         System.out.println();
 
